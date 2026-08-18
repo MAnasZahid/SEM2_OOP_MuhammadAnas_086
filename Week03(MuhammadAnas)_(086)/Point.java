@@ -61,7 +61,7 @@ public class Point {
         return totalPoints;
     }
 
-    @Override
+
     public String toString() {
         return "(" + xCoord + ", " + yCoord + ")";
     }
