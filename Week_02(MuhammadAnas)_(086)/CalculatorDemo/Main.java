@@ -1,28 +1,58 @@
 public class Main{
     public static void main(String[]args){
-        Calculator Calculator1 = new Calculator(10, 5);
-        Calculator Calculator2 = new Calculator(20, 0);
+        Calculator casio = new Calculator();
+        casio.show();
+        Calculator claz = new Calculator(10, 5);
+        claz.show();
+        Calculator citizen = new Calculator(casio);
+        citizen.show();
         
 
         System.out.println("Case 1:");
-        Calculator1.showInfo();
-        Calculator1.showadd();
-        Calculator1.showsub();
-        Calculator1.showmulti();
-        Calculator1.showdiv();
-        Calculator1.showmod();
-        Calculator1.showavg();
+        casio.show();
+       
+        System.out.println("Case 2:");
+        claz.show();
+        
+        System.out.println("Case 3:");
+        citizen.show();
+
+        casio.setNum1Num2(20, 10);
+        casio.show();
+
+        casio.getNum2();
+        casio.show();
+        
+        claz.getNum1();
+        claz.show();
+
+        casio.add();
+        casio.show();
+
+        // Subtraction
+        citizen.subtract();
+        citizen.show();
+
+        // Multiplication
+        claz.multiply();
+        claz.show();
+
+        
+        // Division
+        claz.divide();
+        claz.show();
+
+        // Division by Zero (Edge Case)
+        casio.setNum1Num2(20, 0);
+        casio.divide();
+        casio.show();
+
+        // Modulus
+        citizen.modulus();
+        citizen.show();
+
        
 
-        System.out.println("Case 2:");
-        Calculator2.showInfo();
-        Calculator2.showadd();
-        Calculator2.showsub();
-        Calculator2.showmulti();
-        Calculator2.showdiv();
-        Calculator2.showmod();
-        Calculator2.showavg();
-        
     }
 }
 
