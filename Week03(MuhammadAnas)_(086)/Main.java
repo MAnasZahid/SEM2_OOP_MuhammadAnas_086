@@ -1,25 +1,40 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("---------- Point Demo ----------");
+    //NULL 
+    Point p1=new Point();
+    p1.show();
 
-        Point origin = new Point();
-        Point a = new Point(2, 3);
-        Point b = new Point(5, 7);
-        Point c = new Point(a);
+    //PARAMETERIZED
+    Point p2=new Point(5,6);
+    p2.show();
 
-        System.out.println("Origin: " + origin);
-        System.out.println("Point A: " + a);
-        System.out.println("Point B: " + b);
-        System.out.println("Point C (copy of A): " + c);
-        System.out.println("A equals C: " + a.equals(c));
+    // COPY
+    Point p3=new Point(p1);
+    p3.show();
 
-        Point sum = a.plus(b);
-        Point diff = b.minus(a);
+    //SUBTRACT 
+    Point p4=p2.minus(p1);
+    p4.show();
 
-        System.out.println("A + B = " + sum);
-        System.out.println("B - A = " + diff);
-        System.out.println("Distance A to B: " + a.distanceTo(b));
+    //MIDPOINT
+    Point p5=p1.midPoint(p2);
+    p5.show();
+    
+    //EQUALS
+    System.out.println(p1.equals(p2));
 
-        System.out.println("Total points created so far: " + Point.totalCreated());
+    // ADDITION
+    Point p6=p2.plus(p1);
+    p6.show();
+
+    // //SLOPE
+    System.out.println("Slope: "+ String.format("%.2f", p1.slope(p2)));
+   
+    // DISTANCE Between points
+    System.out.println("Distance: "+ String.format("%.2f", p2.distanceTo(p1)));
+
+
+
     }
 }
