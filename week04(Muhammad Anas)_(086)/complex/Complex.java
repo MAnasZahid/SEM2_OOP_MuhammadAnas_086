@@ -78,7 +78,6 @@ public class Complex {
         return totalComplexNumbers;
     }
 
-    @Override
     public String toString() {
         if (imaginary >= 0) {
             return real + " + " + imaginary + "i";
