@@ -124,9 +124,7 @@ public class Triangle {
 
     public static int totalCreated() {
         return totalTriangles;
-    }
 
-    @Override
     public String toString() {
         return "Triangle[A=" + vertexA + ", B=" + vertexB + ", C=" + vertexC + "]";
     }
