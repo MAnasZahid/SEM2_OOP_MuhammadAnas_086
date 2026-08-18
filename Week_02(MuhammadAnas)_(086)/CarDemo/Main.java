@@ -1,51 +1,49 @@
 public class Main{
     public static void main(String[]args){
         Car bmw=new Car();
+        bmw.displaystates();
+
         Car ferarri=new Car();
+        ferarri.displaystates();
         
         bmw.setdetails("Black","BMW");
         ferarri.setdetails("Red","Ferarri");
 
         bmw.startengine();
-        bmw.displaystate();
-
+        bmw.displaystates();
 
         ferarri.startengine();
-        ferarri.displaystate();
+        ferarri.displaystates();
         
         bmw.acceleration(40);
-        bmw.displaystate();
+        bmw.displaystates();
 
         ferarri.acceleration(90);
-        ferarri.displaystate();
+        ferarri.displaystates();
 
         bmw.turnRight();
-        bmw.displaystate();
+        bmw.displaystates();
 
         ferarri.turnLeft();
-        ferarri.displaystate();
+        ferarri.displaystates();
 
         bmw.turbo();
-        bmw.displaystate();
+        bmw.displaystates();
 
         ferarri.turbo();
-        ferarri.displaystate();
+        ferarri.displaystates();
 
         bmw.driftmode();
-        bmw.displaystate();
+        bmw.displaystates();
 
         ferarri.driftmode();
-        ferarri.displaystate();
+        ferarri.displaystates();
 
         bmw.breakes();
-        bmw.displaystate();
+        bmw.displaystates();
 
         ferarri.stopengine();
-        ferarri.displaystate();
-
-        
-
-
+        ferarri.displaystates();
         
     }
 }
