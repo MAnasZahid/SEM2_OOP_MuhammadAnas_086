@@ -7,6 +7,9 @@ public class Car {
     private String direction;
     private int fuel;
     private boolean turboMode;
+     private static int objectCount = 0;
+
+    // NULL
     public Car() {
         this.speed=0;
         this.angle=180;
@@ -16,7 +19,50 @@ public class Car {
         this.engineON=false;
         this.fuel= 100;
         this.direction = "forward";
+        objectCount++;
     }
+    // PARAMETERIZED 
+     Car(float speed,float angle,boolean engineON,String colour,String brand){
+        this.speed=speed;
+        this.angle=angle;
+        this.engineON=engineON;
+        this.colour=colour;
+        this.brand=brand;
+        this.turboMode=false;
+        this.fuel= 100;
+        this.direction = "forward";
+        objectCount++;
+     }
+    // COPY
+      Car(Car obj){
+        this.speed=obj.speed;
+        this.angle=obj.angle;
+        this.engineON=obj.engineON;    
+        this.colour=obj.colour;
+        this.brand=obj.brand;
+        this.turboMode=obj.turboMode;
+        this.fuel=obj.fuel;
+        this.direction=obj.direction;
+        objectCount++;
+    }
+    //GETTERS AND SETTERS
+     public static int ObjectCount(){
+        return objectCount;
+    }
+     float getSpeed(){
+       return this.speed;
+    }
+
+    
+    float getAngle(){
+        return this.angle;
+    }
+
+    public void setSpeedAngle(float speed,float angle){
+        this.speed=speed;
+        this.angle=angle;
+    }
+
     public void setdetails(String colour, String brand){
         this.colour=colour;
         this.brand=brand;
@@ -40,8 +86,7 @@ public class Car {
         this.turboMode = true;
         this.speed += 100;
     }
-    
-
+   
 
     public void acceleration(float acc){
         if(!this.engineON){
@@ -78,17 +123,20 @@ public class Car {
         
     }
 
+
+    public String toString(){
+        return ("speed is:"+ this.speed+"Km/h" +",\nangle is:"+this.angle+" degrees"+",\nEngine state:"+this.engineON+" \nobject count:"+Car.ObjectCount());
+    }
     
-    public void displaystate(){
+    public void displaystates(){
         System.out.println("Brand:"+this.brand);
         System.out.println("Colour:"+this.colour);
-        System.out.println("Engine Status:"+this.engineON);
+        System.out.println(this.toString());
         System.out.println("Fuel:"+this.fuel+"%");
-        System.out.println("Speed: "+this.speed+" km/h"); 
         System.out.println("Direction:"+this.direction);
         System.out.println("turbo mode: "+(this.speed>100));
         System.out.println();
         System.out .println("X----------------------------------------X");
-         System.out.println();
+        System.out.println();
     }
 }
