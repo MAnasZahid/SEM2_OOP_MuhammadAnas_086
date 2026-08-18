@@ -105,7 +105,7 @@ public class Rational {
         return totalRationals;
     }
 
-    @Override
+
     public String toString() {
         return numerator + "/" + denominator;
     }
